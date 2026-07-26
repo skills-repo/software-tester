@@ -1,6 +1,12 @@
 ---
 name: test-coverage
 description: 测试覆盖率分析，识别未覆盖分支并自动生成补充用例
+source:
+  type: original
+  repo: skills-repo/software-tester
+  path: skills/test-coverage/SKILL.md
+  version: 1.0.0
+  updated: 2026-07-26
 metadata:
   category: 覆盖率
   platform: 通用

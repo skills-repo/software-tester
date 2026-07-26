@@ -1,6 +1,12 @@
 ---
 name: e2e-testing
 description: Playwright/Cypress 端到端测试生成与维护，自动识别页面交互流程生成测试用例
+source:
+  type: original
+  repo: skills-repo/software-tester
+  path: skills/e2e-testing/SKILL.md
+  version: 1.0.0
+  updated: 2026-07-26
 metadata:
   category: E2E测试
   platform: Web

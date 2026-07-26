@@ -1,6 +1,12 @@
 ---
 name: api-testing
 description: REST/GraphQL API 测试用例生成，覆盖状态码、参数校验、鉴权和响应结构
+source:
+  type: original
+  repo: skills-repo/software-tester
+  path: skills/api-testing/SKILL.md
+  version: 1.0.0
+  updated: 2026-07-26
 metadata:
   category: API测试
   platform: API
