@@ -18,10 +18,10 @@
 
 | 环节 | 技能 | 描述 | 来源 |
 |------|------|------|------|
-| 🧪 E2E | `e2e-testing` | Playwright/Cypress 端到端测试生成与维护 | 原创 |
-| 🔬 单元测试 | `unit-test-writer` | 自动生成单元测试，Jest/Vitest/Pytest | 原创 |
-| 🔗 API 测试 | `api-testing` | REST/GraphQL API 测试用例生成 | 原创 |
-| 📊 覆盖率 | `test-coverage` | 测试覆盖率分析与缺失用例补充 | 原创 |
+| 🧪 E2E | `e2e-testing` | Playwright 浏览器自动化：页面交互、快照、表单、截图 | [衍生](https://skills.sh/microsoft/playwright-cli/playwright-cli) |
+| 🔬 单元测试 | `unit-test-writer` | Pytest 测试覆盖率：发现未覆盖行，持续增加到 100% | [衍生](https://skills.sh/github/awesome-copilot/pytest-coverage) |
+| 🔗 API 测试 | `api-testing` | REST/GraphQL API 测试：请求构造、参数校验、鉴权验证 | [衍生](https://skills.sh/briiirussell/cybersecurity-skills/api-audit) |
+| 📊 覆盖率 | `test-coverage` | 测试策略设计：覆盖率目标、测试金字塔、CI 集成 | [衍生](https://skills.sh/github/awesome-copilot/pytest-coverage) |
 
 ## 快速开始
 

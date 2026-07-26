@@ -1,56 +1,56 @@
 ---
 name: e2e-testing
-description: Playwright/Cypress 端到端测试生成与维护，自动识别页面交互流程生成测试
+description: Playwright 浏览器自动化：页面交互、快照定位、表单填写、截图
 source:
-  type: original
+  type: derived
   repo: skills-repo/software-tester
   path: skills/e2e-testing/SKILL.md
   version: 1.0.0
   updated: 2026-07-26
+  url: https://skills.sh/microsoft/playwright-cli/playwright-cli
 metadata:
-  category: E2E测试
+  category: E2E 测试
   platform: Web
-  difficulty: 进阶
+  difficulty: 入门
 ---
 
-# E2E 端到端测试
+# Playwright 浏览器自动化
 
-> 自动识别用户流程，生成可维护的 Playwright/Cypress 端到端测试。
+> 使用 Playwright CLI 进行浏览器交互和端到端测试：导航、快照、点击、表单、截图。
 
 ## 能力
 
-- **页面交互识别**：分析组件代码，自动提取用户操作流程
-- **测试用例生成**：基于交互流程生成 Playwright/Cypress 测试代码
-- **选择器优化**：优先使用 `data-testid`，自动建议语义化选择器
-- **失败诊断**：分析测试失败截图和日志，定位根因
-- **CI 集成**：输出可直接用于 GitHub Actions 的测试配置
+- **页面操作**：open/goto 导航、back 回退、snapshot 快照
+- **元素交互**：click/type/fill/dblclick/drag/drop/hover 全支持
+- **表单**：fill + --submit、select、check/uncheck、upload
+- **快照定位**：基于 ref 的精确定位，find 搜索文本或正则
+- **脚本与截图**：eval 执行 JS、screenshot 截图
 
 ## 使用方式
 
-在 Claude Code 中使用 `/e2e-testing` 调用。
-
 ```
-/e2e-testing 为登录页面生成 E2E 测试
-/e2e-testing 分析上一次测试失败的原因
+/e2e-testing 打开 example.com，填表单并截图
+/e2e-testing 自动化测试这个登录流程
+/e2e-testing 在快照中搜索 "Sign in" 并点击
 ```
 
 ## 工作流
 
-1. 指定要测试的页面或用户流程
-2. AI 分析组件结构，提取交互路径
-3. 生成测试用例（正常路径 + 异常路径 + 边界情况）
-4. 输出 Playwright/Cypress 测试代码
-5. 提供运行命令和 CI 配置建议
+1. `playwright-cli open https://example.com` 打开浏览器
+2. `playwright-cli snapshot` 获取页面可访问性快照
+3. 基于快照 ref 进行交互（click/fill/type）
+4. `playwright-cli screenshot` 截图验证
+5. `playwright-cli close` 关闭浏览器
 
 ## 适用场景
 
-- 新功能上线前的 E2E 测试编写
-- 回归测试用例补充
-- 关键业务流程（登录、支付、下单）测试覆盖
-- 跨浏览器兼容性测试
+- 网页交互自动化
+- 表单填写测试
+- 页面截图采集
+- E2E 测试快速原型
 
 ## 限制
 
-- 不处理原生移动应用测试（需配合 Appium 等工具）
-- 不生成性能/压力测试用例
-- 复杂动画/Canvas 交互需人工补充验证逻辑
+- 需要安装 Playwright（`npx playwright install`）
+- 不替代完整的 Playwright 测试框架（test runner + assertions）
+- 复杂多页面流程建议用 Playwright Test

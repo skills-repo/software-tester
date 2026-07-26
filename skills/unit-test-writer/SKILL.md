@@ -1,56 +1,54 @@
 ---
 name: unit-test-writer
-description: 自动生成单元测试，Jest/Vitest/Pytest，覆盖正常路径、边界值和异常
+description: Pytest 测试覆盖率：运行测试、发现未覆盖行、持续增加覆盖率到 100%
 source:
-  type: original
+  type: derived
   repo: skills-repo/software-tester
   path: skills/unit-test-writer/SKILL.md
   version: 1.0.0
   updated: 2026-07-26
+  url: https://skills.sh/github/awesome-copilot/pytest-coverage
 metadata:
   category: 单元测试
-  platform: 通用
+  platform: Python
   difficulty: 入门
 ---
 
-# 单元测试编写器
+# Pytest 测试覆盖率
 
-> 给定函数或模块代码，自动生成高质量的单元测试。
+> 运行 pytest 测试并生成覆盖率报告，发现未覆盖代码行，持续补充测试直到 100% 覆盖。
 
 ## 能力
 
-- **多框架支持**：Jest、Vitest、Pytest、Go testing、JUnit
-- **全面覆盖**：正常输入、边界值、空值、异常输入、错误路径
-- **Mock 生成**：自动识别外部依赖，生成对应的 mock/stub
-- **测试数据工厂**：为复杂对象生成测试数据构造器
-- **快照测试**：对 UI 组件自动生成快照测试
+- **覆盖率报告**：`pytest --cov --cov-report=annotate:cov_annotate` 生成逐行标注
+- **未覆盖定位**：`!` 标记精确指出未测试代码行
+- **迭代补充**：逐文件检查、补充测试、重新运行、直到全覆盖
+- **模块聚焦**：`pytest --cov=module_name` 只检查特定模块
+- **测试选择**：`pytest tests/test_x.py --cov=x` 精准运行相关测试
 
 ## 使用方式
 
-在 Claude Code 中使用 `/unit-test-writer` 调用。
-
 ```
-/unit-test-writer 为这个函数生成单元测试
-/unit-test-writer 补全这个模块缺失的测试用例
+/unit-test-writer 为这个模块生成 100% 覆盖率的测试
+/unit-test-writer 找出所有未覆盖的代码行
 ```
 
 ## 工作流
 
-1. 提供目标函数或模块代码
-2. AI 分析函数签名、分支逻辑、外部依赖
-3. 生成测试用例矩阵（happy path + edge cases + error cases）
-4. 生成 mock 和测试数据
-5. 输出完整可运行的测试文件
+1. 运行 `pytest --cov --cov-report=annotate:cov_annotate`
+2. 打开 `cov_annotate/` 目录，查看标注后的源码
+3. 100% 覆盖的文件跳过，只关注有 `!` 标记的文件
+4. 逐行分析未覆盖的代码，补充测试
+5. 重复运行直到所有行覆盖
 
 ## 适用场景
 
-- 新函数/模块的测试编写
-- 遗留代码补充测试覆盖
-- PR 审查时发现缺少测试
-- 重构前先补齐测试安全网
+- Python 项目测试覆盖率提升
+- CI 中设置覆盖率门槛
+- 遗留代码补充测试
 
 ## 限制
 
-- 不处理需要硬件/特殊环境的测试
-- 复杂并发/竞态条件的测试需人工审查
-- 测试质量依赖输入代码的可测试性
+- 仅支持 Python/pytest
+- 100% 覆盖率不等于无 bug
+- 不涉及测试质量评估（仅行覆盖）
