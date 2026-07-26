@@ -1,6 +1,6 @@
 ---
 name: api-testing
-description: REST/GraphQL API 测试用例生成，覆盖状态码、参数校验、鉴权和响应结构
+description: REST/GraphQL API 测试生成，覆盖状态码、参数校验、鉴权和响应结构
 source:
   type: original
   repo: skills-repo/software-tester

@@ -1,6 +1,6 @@
 ---
 name: unit-test-writer
-description: 自动生成单元测试，支持 Jest/Vitest/Pytest，覆盖正常路径、边界值和异常情况
+description: 自动生成单元测试，Jest/Vitest/Pytest，覆盖正常路径、边界值和异常
 source:
   type: original
   repo: skills-repo/software-tester
