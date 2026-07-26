@@ -16,12 +16,12 @@
 
 ## 技能清单
 
-| 环节 | 技能 | 描述 |
-|------|------|------|
-| 🧪 E2E | `e2e-testing` | Playwright/Cypress 端到端测试生成与维护 |
-| 🔬 单元测试 | `unit-test-writer` | 自动生成单元测试，Jest/Vitest/Pytest |
-| 🔗 API 测试 | `api-testing` | REST/GraphQL API 测试用例生成 |
-| 📊 覆盖率 | `test-coverage` | 测试覆盖率分析与缺失用例补充 |
+| 环节 | 技能 | 描述 | 来源 |
+|------|------|------|------|
+| 🧪 E2E | `e2e-testing` | Playwright/Cypress 端到端测试生成与维护 | 原创 |
+| 🔬 单元测试 | `unit-test-writer` | 自动生成单元测试，Jest/Vitest/Pytest | 原创 |
+| 🔗 API 测试 | `api-testing` | REST/GraphQL API 测试用例生成 | 原创 |
+| 📊 覆盖率 | `test-coverage` | 测试覆盖率分析与缺失用例补充 | 原创 |
 
 ## 快速开始
 
