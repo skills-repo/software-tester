@@ -1,46 +1,65 @@
-# 软件测试技能库
+# software-tester（超级技能 · Superpowers 架构）
 
-> AI Agent Skills for Software Testing —— 覆盖单元测试、E2E 测试、API 测试、覆盖率分析
+> 一个完整的软件测试技能：让 AI 编程助手成为覆盖测试金字塔全层的专业测试工程搭档。
 
-## 定位
+采用 **Superpowers 架构**：薄 `SKILL.md` 作路由，`references/` 存放按需加载的完整 playbook，`scripts/` 提供确定性可重复脚本，`assets/` 提供即取即用的配置与模板。上下文按需渐进式加载（progressive disclosure）。
 
-为软件开发者提供一套可安装的 AI Agent 测试技能，让 Claude Code 等 AI 编程助手成为你的自动化测试搭档。
+## 覆盖能力
 
-## 核心理念
+| 域 | Playbook | 关键工具 |
+|----|----------|----------|
+| 单元测试 / 覆盖率 | `references/unit-testing.md` | pytest / Jest / Vitest |
+| 端到端 | `references/e2e-testing.md` | Playwright Test |
+| API 测试 | `references/api-testing.md` | REST / GraphQL |
+| 测试策略 / 治理 | `references/test-strategy.md` | 金字塔 / CI 门禁 |
+| TDD | `references/tdd.md` | red-green-refactor |
+| 性能 / 压测 | `references/performance-testing.md` | k6 / Locust |
+| 安全测试 | `references/security-testing.md` | OWASP API Top 10 |
+| 可视化回归 | `references/visual-regression.md` | Playwright / Percy |
+| 契约测试 | `references/contract-testing.md` | Pact (CDC) |
+| 报告 / 风险 | `references/reporting.md` | 计划 / 矩阵 / 风险 |
 
-> 写好测试是工程纪律，不是负担。用 AI 降低测试编写成本，让每一个 PR 都有测试护航。
+## 目录结构
 
-- **测试先行**——先写测试再写代码，AI 帮你生成测试骨架
-- **聚焦质量**——不仅测功能正确性，还测边界、异常、性能退化
-- **可落地执行**——每个技能输出可直接运行的测试代码
-
-## 技能清单
-
-| 环节 | 技能 | 描述 | 来源 |
-|------|------|------|------|
-| 🧪 E2E | `e2e-testing` | Playwright 浏览器自动化：页面交互、快照、表单、截图 | [衍生](https://skills.sh/microsoft/playwright-cli/playwright-cli) |
-| 🔬 单元测试 | `unit-test-writer` | Pytest 测试覆盖率：发现未覆盖行，持续增加到 100% | [衍生](https://skills.sh/github/awesome-copilot/pytest-coverage) |
-| 🔗 API 测试 | `api-testing` | REST/GraphQL API 测试：请求构造、参数校验、鉴权验证 | [衍生](https://skills.sh/briiirussell/cybersecurity-skills/api-audit) |
-| 📊 覆盖率 | `test-coverage` | 测试策略设计：覆盖率目标、测试金字塔、CI 集成 | [衍生](https://skills.sh/github/awesome-copilot/pytest-coverage) |
+```
+software-tester/
+├── SKILL.md                 # 薄路由：触发词 + 能力索引 + 脚本/资源索引 + 核心原则
+├── README.md                # 本文件
+├── AGENTS.md                # AI 助手使用指引
+├── references/              # 10 个按需加载的 playbook
+├── scripts/                 # 确定性脚本
+│   ├── run_coverage.py      # 运行覆盖率并汇总未覆盖行
+│   ├── gen_test_plan.py     # 生成测试计划
+│   ├── test_matrix.py       # 生成 API 测试矩阵
+│   └── e2e_scaffold.py      # 生成 Playwright 测试骨架
+└── assets/                  # 模板与配置
+    ├── ci-coverage.yml
+    ├── test-plan-template.md
+    ├── playwright.config.template.ts
+    └── jest.config.template.js
+```
 
 ## 快速开始
 
 ```bash
-# 安装全部技能
-npx skills add skills-repo/software-tester@e2e-testing -g -y
-npx skills add skills-repo/software-tester@unit-test-writer -g -y
-npx skills add skills-repo/software-tester@api-testing -g -y
-npx skills add skills-repo/software-tester@test-coverage -g -y
+# 覆盖率
+python3 scripts/run_coverage.py ./src --lang python
+# 测试计划
+python3 scripts/gen_test_plan.py --name 支付模块 --features 创建订单,退款
+# API 测试矩阵
+python3 scripts/test_matrix.py --method POST --path /api/login --params username,password --auth
+# E2E 骨架
+python3 scripts/e2e_scaffold.py --name 登录流程 --steps "打开 /login;输入账号 hope;点击提交"
 ```
 
-## 推荐工作流
+## 设计原则
 
-```
-单元测试 → API 测试 → E2E 测试 → 覆盖率检查
-unit-      api-        e2e-       test-
-test       testing     testing    coverage
-writer
-```
+1. 测试先行（TDD 优先）
+2. 测试金字塔（单测 70% / 集成 20% / E2E 10%）
+3. 覆盖 ≠ 质量
+4. 产出可运行、脚本确定
+5. 先读对应 playbook 再动手
+6. 专项结果以报告呈现，不替 QA 拍板策略
 
 ## 许可
 
