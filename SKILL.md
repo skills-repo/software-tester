@@ -42,6 +42,7 @@ metadata:
 | 可视化回归 | `references/visual-regression.md` | 截图比对, visual regression, percy, 像素 diff |
 | 契约测试 | `references/contract-testing.md` | pact, 契约, consumer-driven, 接口契约 |
 | 测试报告 / 风险 | `references/reporting.md` | 测试报告, 风险, 通过率, 质量门禁 |
+| 失败分诊 / 提缺陷前 | `references/failure-triage.md` | 测试失败, 红了, flaky, 环境问题, 根因, 提 issue |
 
 ## 细粒度子技能（可单独安装）
 

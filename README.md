@@ -18,6 +18,35 @@
 | 可视化回归 | `references/visual-regression.md` | Playwright / Percy |
 | 契约测试 | `references/contract-testing.md` | Pact (CDC) |
 | 报告 / 风险 | `references/reporting.md` | 计划 / 矩阵 / 风险 |
+| 失败分诊 | `references/failure-triage.md` | 根因定位 / flaky / 提缺陷前自检 |
+
+## 细粒度子技能
+
+可整库安装，也可只取其中一个：
+
+| 技能 | 说明 | 来源 |
+|------|------|------|
+| `unit-test-writer` | Pytest 覆盖率：运行测试、发现未覆盖行、补到 100% | derived |
+| `api-testing` | REST/GraphQL：请求构造、状态码验证、响应检查 | derived |
+| `e2e-testing` | Playwright 浏览器自动化：交互、快照定位、截图 | derived |
+| `test-coverage` | 测试策略：覆盖率目标、测试金字塔、CI 集成 | derived |
+
+## 安装
+
+### 安装完整技能库（推荐，含 references / scripts / assets）
+
+```bash
+npx skills add skills-repo/software-tester -g -y
+```
+
+### 只安装某个细粒度子技能
+
+```bash
+npx skills add skills-repo/software-tester@unit-test-writer -g -y
+npx skills add skills-repo/software-tester@api-testing -g -y
+npx skills add skills-repo/software-tester@e2e-testing -g -y
+npx skills add skills-repo/software-tester@test-coverage -g -y
+```
 
 ## 目录结构
 
@@ -26,7 +55,8 @@ software-tester/
 ├── SKILL.md                 # 薄路由：触发词 + 能力索引 + 脚本/资源索引 + 核心原则
 ├── README.md                # 本文件
 ├── AGENTS.md                # AI 助手使用指引
-├── references/              # 10 个按需加载的 playbook
+├── references/              # 11 个按需加载的 playbook
+├── skills/                  # 4 个可单独安装的细粒度子技能
 ├── scripts/                 # 确定性脚本
 │   ├── run_coverage.py      # 运行覆盖率并汇总未覆盖行
 │   ├── gen_test_plan.py     # 生成测试计划
