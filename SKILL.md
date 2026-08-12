@@ -54,6 +54,8 @@ metadata:
 | e2e-testing | `skills/e2e-testing` | Playwright 页面交互、快照定位、表单与截图 |
 | test-coverage | `skills/test-coverage` | 覆盖率目标、测试金字塔、CI 集成与类型选择 |
 | unit-test-writer | `skills/unit-test-writer` | pytest 覆盖率驱动补测，逐步逼近 100% |
+| performance-testing | `skills/performance-testing` | k6/Locust 负载/压力/尖峰/容量，p95 门禁 |
+| security-testing | `skills/security-testing` | OWASP API Top 10 越权/注入/鉴权验证 |
 
 子技能是轻量入口；需要完整方法论时回到上表的 `references/`。
 

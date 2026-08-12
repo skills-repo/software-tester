@@ -30,6 +30,8 @@
 | `api-testing` | REST/GraphQL：请求构造、状态码验证、响应检查 | derived |
 | `e2e-testing` | Playwright 浏览器自动化：交互、快照定位、截图 | derived |
 | `test-coverage` | 测试策略：覆盖率目标、测试金字塔、CI 集成 | derived |
+| `performance-testing` | k6/Locust 负载/压力/尖峰/容量，p95 门禁 | derived |
+| `security-testing` | OWASP API Top 10 越权/注入/鉴权验证 | original |
 
 ## 安装
 
@@ -46,6 +48,8 @@ npx skills add skills-repo/software-tester@unit-test-writer -g -y
 npx skills add skills-repo/software-tester@api-testing -g -y
 npx skills add skills-repo/software-tester@e2e-testing -g -y
 npx skills add skills-repo/software-tester@test-coverage -g -y
+npx skills add skills-repo/software-tester@performance-testing -g -y
+npx skills add skills-repo/software-tester@security-testing -g -y
 ```
 
 ## 目录结构
@@ -56,7 +60,7 @@ software-tester/
 ├── README.md                # 本文件
 ├── AGENTS.md                # AI 助手使用指引
 ├── references/              # 11 个按需加载的 playbook
-├── skills/                  # 4 个可单独安装的细粒度子技能
+├── skills/                  # 6 个可单独安装的细粒度子技能
 ├── scripts/                 # 确定性脚本
 │   ├── run_coverage.py      # 运行覆盖率并汇总未覆盖行
 │   ├── gen_test_plan.py     # 生成测试计划
