@@ -34,6 +34,7 @@ metadata:
 |------|------|---------------------|
 | 单元测试 / 覆盖率 | `references/unit-testing.md` | pytest, jest, vitest, coverage, 覆盖率, 单测 |
 | 端到端测试 | `references/e2e-testing.md` | playwright, e2e, 端到端, 快照, page object |
+| React 前端组件测试 | `references/react-frontend-testing.md` | react, 前端, 组件, rtl, jest, vitest, 交互 |
 | API 测试 | `references/api-testing.md` | rest, graphql, 接口, 鉴权, 参数校验 |
 | 测试策略 / 覆盖率治理 | `references/test-strategy.md` | 金字塔, 策略, CI 门禁, 测试债, coverage gate |
 | TDD 工作流 | `references/tdd.md` | 测试驱动, red-green-refactor, 先写测试 |
@@ -52,6 +53,7 @@ metadata:
 |--------|------|------|
 | api-testing | `skills/api-testing` | REST/GraphQL 请求构造、状态码与响应校验 |
 | e2e-testing | `skills/e2e-testing` | Playwright 页面交互、快照定位、表单与截图 |
+| react-frontend-testing | `skills/react-frontend-testing` | React 组件 RTL 渲染、user-event 交互、查询与 mock |
 | test-coverage | `skills/test-coverage` | 覆盖率目标、测试金字塔、CI 集成与类型选择 |
 | unit-test-writer | `skills/unit-test-writer` | pytest 覆盖率驱动补测，逐步逼近 100% |
 | performance-testing | `skills/performance-testing` | k6/Locust 负载/压力/尖峰/容量，p95 门禁 |

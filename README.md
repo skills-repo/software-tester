@@ -10,6 +10,7 @@
 |----|----------|----------|
 | 单元测试 / 覆盖率 | `references/unit-testing.md` | pytest / Jest / Vitest |
 | 端到端 | `references/e2e-testing.md` | Playwright Test |
+| React 前端组件测试 | `references/react-frontend-testing.md` | React Testing Library / Jest / Vitest |
 | API 测试 | `references/api-testing.md` | REST / GraphQL |
 | 测试策略 / 治理 | `references/test-strategy.md` | 金字塔 / CI 门禁 |
 | TDD | `references/tdd.md` | red-green-refactor |
@@ -29,6 +30,7 @@
 | `unit-test-writer` | Pytest 覆盖率：运行测试、发现未覆盖行、补到 100% | derived |
 | `api-testing` | REST/GraphQL：请求构造、状态码验证、响应检查 | derived |
 | `e2e-testing` | Playwright 浏览器自动化：交互、快照定位、截图 | derived |
+| `react-frontend-testing` | React 组件 RTL 渲染、user-event 交互、查询与 mock | derived |
 | `test-coverage` | 测试策略：覆盖率目标、测试金字塔、CI 集成 | derived |
 | `performance-testing` | k6/Locust 负载/压力/尖峰/容量，p95 门禁 | derived |
 | `security-testing` | OWASP API Top 10 越权/注入/鉴权验证 | original |
@@ -47,6 +49,7 @@ npx skills add skills-repo/software-tester -g -y
 npx skills add skills-repo/software-tester@unit-test-writer -g -y
 npx skills add skills-repo/software-tester@api-testing -g -y
 npx skills add skills-repo/software-tester@e2e-testing -g -y
+npx skills add skills-repo/software-tester@react-frontend-testing -g -y
 npx skills add skills-repo/software-tester@test-coverage -g -y
 npx skills add skills-repo/software-tester@performance-testing -g -y
 npx skills add skills-repo/software-tester@security-testing -g -y
@@ -59,8 +62,8 @@ software-tester/
 ├── SKILL.md                 # 薄路由：触发词 + 能力索引 + 脚本/资源索引 + 核心原则
 ├── README.md                # 本文件
 ├── AGENTS.md                # AI 助手使用指引
-├── references/              # 11 个按需加载的 playbook
-├── skills/                  # 6 个可单独安装的细粒度子技能
+├── references/              # 12 个按需加载的 playbook
+├── skills/                  # 7 个可单独安装的细粒度子技能
 ├── scripts/                 # 确定性脚本
 │   ├── run_coverage.py      # 运行覆盖率并汇总未覆盖行
 │   ├── gen_test_plan.py     # 生成测试计划
